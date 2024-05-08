@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-
 function DataSender() {
     const [inputValue, setInputValue] = useState('');
-
     const sendData = () => {
         fetch('http://localhost:5000/post_data', {
             method: 'POST',
@@ -24,5 +22,4 @@ function DataSender() {
         </div>
     );
 }
-
 export default DataSender;

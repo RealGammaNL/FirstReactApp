@@ -1,43 +1,38 @@
-import { useState } from 'react';
 import './App.css';
+import ReactLogo from './assets/react.svg'
 import DataDisplay from './DataDisplay';
 import DataSender from './DataSender';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import DataGridFiller from './DataGridFiller';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <h1>Hello, World!</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Vite and React logos to learn more
-      </p>
-      <div className="App">
-        <DataDisplay />
-        </div>
-        <div className="App">
-            <DataSender />
-        </div>
-    </>
+      <>
+          <nav>
+              <ul>
+                  <div className="navitems">
+                      <img src={ReactLogo} alt="React Logo" className="nav-logo" />
+                      <h1 className="homeheader">Welcome to My First React App</h1>
+                  </div>
+                  <div className="navitems">
+                      <li><a href="/">Home</a></li>
+                      <li><a href="/about">About</a></li>
+                      <li><a href="/contact">Contact</a></li>
+                  </div>
+                  {/* Add more <li> elements as needed */}
+              </ul>
+          </nav>
+          <div className="app">
+              <div className="data-display">
+                  <DataDisplay />
+              </div>
+              <div className="data-sender">
+                  <DataSender />
+              </div>
+              <div className="data-grid-filler">
+                  <DataGridFiller />
+              </div>
+          </div>
+      </>
   );
 }
 

@@ -5,38 +5,88 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.data-display,
+.data-sender,
+.data-grid-filler {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* This removes the double borders */
+    font-family: 'Roboto', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
 }
 
-.card {
-  padding: 2em;
+th {
+    background-color: cornflowerblue; /* This gives the header cells a blue background */
 }
 
-.read-the-docs {
-  color: #888;
+tr:nth-child(even) {
+    background-color: lightsteelblue; /* This gives every other row a light blue background */
+}
+
+tr:nth-child(odd) {
+    background-color: lightgray; /* This gives the other rows a blue background */
+}
+
+
+h1 {
+    color: #007BFF; /* This changes the color of the h1 elements */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: #007BFF;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; /* Ensure the nav bar starts from the left edge */
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+    nav h1, nav a {
+        font-size: 20px; /* Adjust as needed */
+        color: #fff;
+        text-decoration: none;
+    }
+
+.navitems {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.data-display {
+    margin-top: 65px;
 }

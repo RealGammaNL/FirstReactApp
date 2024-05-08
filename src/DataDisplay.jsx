@@ -20,7 +20,7 @@ function DataDisplay() {
 
     return (
         <div>
-            <h1>Data from Flask:</h1>
+            <h1>Hello world from Flask:</h1>
             <pre>{data}</pre>
         </div>
     );
